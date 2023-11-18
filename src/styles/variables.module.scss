@@ -1,0 +1,96 @@
+@import "mixins";
+$primary-color: #64ff00;
+$secondary-color: #00ff22;
+.titleSection {
+  margin-bottom: 10px;
+  .emailClass {
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.title {
+  color: $primary-color;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.subTitle {
+  color: $secondary-color;
+  font-size: 20px;
+  text-align: center;
+}
+
+.bgImage {
+  background-image: url("../../public/backgroudImage.jpg");
+}
+.homeStyle {
+  min-height: 100vh;
+}
+
+.homeContainer {
+  color: white;
+
+  .homeTitle {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+  }
+}
+
+.loaderHome {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../public/backgroudImage.jpg");
+}
+
+.FormStyle {
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  border-radius: 20px;
+  Form {
+    font-size: 20px !important;
+    width: 400px;
+    Button {
+      width: 100%;
+      background-color: $primary-color;
+      padding: 0 20px !important;
+    }
+    Button:hover {
+      background-color: $secondary-color;
+      border: none;
+    }
+    Input {
+      padding: 6px 6px !important;
+      font-size: 16px !important;
+    }
+  }
+}
+
+.redirectText {
+  font-size: 16px;
+  color: white;
+}
+
+@include mobile {
+  .FormStyle {
+    padding: 5px;
+    Form {
+      width: 100%;
+    }
+  }
+}
